@@ -1,77 +1,131 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-  <link rel="stylesheet" type="text/css"  href="static/test.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/test.css" />
+  
+  <!-- <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,500&family=Lato:ital,wght@1,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,700&family=Noticia+Text:wght@700&family=Prata&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;600&family=Kay+Pho+Du:wght@500&family=Libre+Franklin:wght@500&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital@0;1&family=Jost:ital,wght@0,300;1,300&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;1,6..12,300&display=swap" rel="stylesheet">
+  
 
-  <main class="container">
- 
-    <section id="preview">
-     <h1 id="join">Join Our Address Book</h1>
-      <h1>Maria Elisa Vallejo Teran</h1>
-      <h2>&</h2>
-      <h1>Randolph Macon Richardson V</h1>
+  <!-- <a class="photo-wrap" href="#"><img class="photo" src="static/IMG_7923.JPG" alt="Lion"> -->s
 
-<section id="form" action="/address_collection" method="post">
+  <main class="container" id="container">
 
-      <form>
+
+    <div class="main">
+      <img src="/static/IMG_7923 (1).JPG" class="resize"/>
+   </div>
+
+    <section id="header"></section>
+    <section id="no-submit">
+
+
+  
+  
+
+      <!-- <section id="form" action="/address_collection" method="post"> -->
+
+        <form name="address-book"
+        onSubmit = "Submit"
+        action="/thank-you/"
+        method="POST"
+        data-netlify="true">
+        
 
         <div class="grid">
 
-          <label for="text">
+          <label for="firstname1">
             First Name / Nombre
-          <input type="text" id="text" name="text" placeholder="" required/>
+            <input type="text" id="firstname1" name="firstname1" placeholder="" required
+            oninvalid="this.setCustomValidity('!')"
+            oninput="this.setCustomValidity('')"/>
           </label>
 
-          <label for="text">
+          <label for="lastname1">
             Last Name / Apellido
-          <input type="text" id="text" name="text" placeholder="" required />
+          <input type="text" id="lastname1" name="lastname1" placeholder="" required 
+          oninvalid="this.setCustomValidity('!')"
+          oninput="this.setCustomValidity('')"/>
           </label>
 
         </div>
 
           <label for="email">
-            Email Address / Correo 
-          <input type="email" id="email" name="email" placeholder="" required />
+            Email Address / Correo Electrónico
+          <input type="email" id="email" name="email" placeholder="" required    
+          oninvalid="this.setCustomValidity('!')"
+          oninput="this.setCustomValidity('')"/>
           </label>
 
-        <div class="grid">
+    
 
           <label for="address">
-            Address / Direccion
-          <input type="address" id="email" name="email" placeholder="" required />
+            Address / Dirección
+          <input type="textarea" id="address" name="address" placeholder="" required 
+          oninvalid="this.setCustomValidity('!')"
+          oninput="this.setCustomValidity('')"/>
           </label>
 
-          <label for="address">
-            City & Country / Ciudad y Pais
-          <input type="address" id="email" name="email" placeholder="" required />
+         
+
+          <label for="city">
+            City / Ciudad
+          <input type="text" id="city" name="city" placeholder="" required 
+          oninvalid="this.setCustomValidity('!')"
+          oninput="this.setCustomValidity('')"/>
           </label>
 
-          </div>
+          <div class="grid">
 
+          <label for="state">
+            State / Estado
+            <input type="text" id="state" name="state" placeholder="" required 
+            oninvalid="this.setCustomValidity('!')"
+            oninput="this.setCustomValidity('')"/>
+          
+            <label for="zip">
+              Zip Code / Código Postal
+              <input type="number" id="zip" name="zip" placeholder="" required 
+              oninvalid="this.setCustomValidity('!')"
+              oninput="this.setCustomValidity('')"/>
+
+            </div>
+
+          <label for="country">
+            Country / País
+            <input type="text" id="country" name="country" placeholder="" required 
+            oninvalid="this.setCustomValidity('!')"
+            oninput="this.setCustomValidity('')"/>
 
 
         
-       
          
-<legend><strong>Spouse </strong></legend>
+         
+<legend><strong>Spouse / Partner </strong></legend>
 
-<div class="grid">
-          <label for="text">
+      <div class="grid">
+          <label for="spouse_firstname">
             First Name / Nombre
-          <input type="text" id="text" name="text" placeholder="" />
+          <input type="text" id="spouse_firstname" name="spouse_firstname" placeholder="" />
           </label>
 
-          <label for="text">
+          <label for="spouse_lastname">
             Last Name / Apellido
-          <input type="text" id="text" name="text" placeholder="" />
+          <input type="text" id="spouse_lastname" name="spouse_lastname" placeholder="" />
           </label>
         </div>
+
+
         
+      </section>
 
-      </form>
 
-      <button type="submit" onclick="event.preventDefault()">Let's Go to Quito!</button>
 
-    </section>
 
-  
+      <button type="submit"></button>
+
+    </form>
+
   </main>
+        
